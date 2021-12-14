@@ -13,7 +13,7 @@
 
   ім'я: user2, пароль: user2
 
-  ім'я: admin, пароль: admin (у цього коритувача - права інкасатора
+  ім'я: admin, пароль: admin, special_key: admin (у цього коритувача - права інкасаторара)
 """
 
 from verification_password_login import verification_password_login
