@@ -37,6 +37,23 @@
 
       - далі - фантазія і креатив :)
 """
+"""
+Перепишіть програму-банкомат на використання бази даних для збереження всих даних.
+
+Використовувати БД sqlite3 та натівний Python.
+
+Дока з прикладами: https://docs.python.org/3/library/sqlite3.html
+
+Туторіал (один із): https://www.sqlitetutorial.net/sqlite-python/
+
+Для уніфікації перевірки, в базі повинні бути 3 користувача:
+
+  ім'я: user1, пароль: user1
+
+  ім'я: user2, пароль: user2
+
+  ім'я: admin, пароль: admin, special_key: admin (у цього коритувача - права інкасатора)
+"""
 
 from verification_password_login import verification_password_login
 from check_balance import check_balance
