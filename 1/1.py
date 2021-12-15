@@ -60,10 +60,12 @@ def start():
                     console_admin(valid)
 
                 if valid:
+                    print("*" * 25)
                     print("1. Look at the balance")
                     print("2. Replenish the balance")  # пополнить счет
                     print("3. Withdraw cash")  # снять наличные
                     print("4. Exit")
+                    print("*" * 25)
                     menu_item = input("Choose : ")
                     if int(menu_item) == 1:
                         check_balance(login)
@@ -82,12 +84,12 @@ def start():
                 if count > 0:
                     continue
                 else:
-                    print("exit the program automatically")
+                    print("<exit the program automatically>")
             if count == 0:
                 break
 
         except Exception as err:
-            print(f"error -> {err}")
+            print(f"<error -> {err}>")
 
 
 # if __name__ in "__main__":

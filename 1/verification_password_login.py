@@ -26,10 +26,10 @@ def verification_password_login(username="", password="", special_key=""):
             elif (password, special_key) == password_db:
                 return "incasation"
             else:
-                raise PasswordException(f"incorrect password -> {password}")
+                raise PasswordException(f"<incorrect password -> {password}>")
         else:
-            raise LoginException(f"incorrect login -> {username}")
+            raise LoginException(f"<incorrect login -> {username}>")
     except LoginException as err:
-        print(f"starus incorrect login -> {err}")
+        print(f"<status incorrect login -> {err}>")
     except PasswordException as err:
-        print(f"status incorrect password -> {err}")
+        print(f"<status incorrect password -> {err}>")

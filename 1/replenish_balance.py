@@ -14,6 +14,6 @@ def replenish_balance(username: str):
             set_user_balance(str(username), int(new_balance))
             set_user_transaction(str(username), int(current_balance), int(new_balance))
         else:
-            print("Entered incorrect amount")
+            print("<Entered incorrect amount>")
     else:
-        print("Only digits allowed to enter")
+        print("<Only digits allowed to enter>")

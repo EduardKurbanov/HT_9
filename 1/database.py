@@ -53,7 +53,7 @@ def set_user_balance(user_name: str, money_amount: int):
         cur.execute(f"UPDATE balance SET amount = {money_amount} WHERE id = {user_id}")
         db_dump.commit()
     else:
-        print("Money amount cant be negative")
+        print("<Money amount cant be negative>")
 
 
 def set_user_transaction(user_name: str, old_balance: int, new_balance: int):

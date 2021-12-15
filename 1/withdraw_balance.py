@@ -9,7 +9,7 @@ def get_currency(money: int):
     summ_value: int = 0
 
     if int(str(money)[-1]) != 0:
-        print("value is not short 10")
+        print("<value is not short 10>")
         return False
 
     available_currency: dict = get_available_currency()
@@ -44,9 +44,9 @@ def get_currency(money: int):
                                         temp_dict: dict = dict(zip(temp0, temp1))
                                         for j in range(0, amount_needed):
                                             temp_list.append(nominal0)
-                                            temp_money_value = available_currency[str(nominal0)]
+                                            temp_money_value = available_currency[int(nominal0)]
                                             if temp_money_value > 0:
-                                                available_currency[str(nominal0)] -= 1
+                                                available_currency[int(nominal0)] -= 1
                                             else:
                                                 break
                                         for items, value in temp_dict.items():
@@ -62,18 +62,18 @@ def get_currency(money: int):
                                                             temp_dict0: dict = dict(zip(temp3, temp4))
                                                             for val00 in range(0, amount_needed0):
                                                                 temp_list.append(val)
-                                                                temp_money_value = available_currency[str(val)]
+                                                                temp_money_value = available_currency[int(val)]
                                                                 if temp_money_value > 0:
-                                                                    available_currency[str(val)] -= 1
+                                                                    available_currency[int(val)] -= 1
                                                                 else:
                                                                     break
                                                             break
                                                         elif (items * value) == check_value:
                                                             for val00 in range(0, amount_needed0):
                                                                 temp_list.append(val)
-                                                                temp_money_value = available_currency[str(val)]
+                                                                temp_money_value = available_currency[int(val)]
                                                                 if temp_money_value > 0:
-                                                                    available_currency[str(val)] -= 1
+                                                                    available_currency[int(val)] -= 1
                                                                 else:
                                                                     break
                                     break
@@ -85,12 +85,12 @@ def get_currency(money: int):
                             requested_amount = 0
                             break
                         else:
-                            print(f"Cant withdraw requested amount: {int(money)}")
+                            print(f"<Cant withdraw requested amount: {int(money)}>")
                             return False
                     continue
                 break
     else:
-        print("Entered incorrect amount")
+        print("<Entered incorrect amount>")
         return False
 
     print("*" * 20)
@@ -120,8 +120,8 @@ def withdraw_balance(username: str):
                 set_user_balance(str(username), int(new_balance))
                 set_user_transaction(str(username), int(current_balance), int(new_balance))
             else:
-                print("Operation unsuccessful")
+                print("<Operation unsuccessful>")
         else:
-            print("Entered incorrect amount")
+            print("<Entered incorrect amount>")
     else:
-        print("Only digits allowed to enter")
+        print("<Only digits allowed to enter>")
